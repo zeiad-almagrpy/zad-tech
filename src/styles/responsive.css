@@ -1,0 +1,71 @@
+/* Extra responsive rules on top of legacy-media.css.
+   Breakpoints: 1440+ large, 1024 tablet, 720 phone, 420 small phone. */
+
+/* ---- tablet and below ---- */
+@media (max-width:1024px){
+  .hero-grid{gap:36px}
+  .contact-page{gap:36px}
+  .journey{gap:32px}
+}
+
+/* ---- phone ---- */
+@media (max-width:720px){
+  .filters{flex-direction:column;align-items:stretch}
+  .searchbox{min-width:0;width:100%}
+  .category-filter{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px;scrollbar-width:thin}
+  .category-filter button{white-space:nowrap;flex:none}
+  .hero-actions{flex-wrap:wrap;gap:14px}
+  .hero-actions>a:first-child,.hero-actions>a:first-child .btn{width:100%}
+  .hero-card{height:300px;border-radius:28px}
+  .orbit-two{width:360px;height:360px}.orbit-one{width:250px;height:250px}
+  .fc-top{top:26px;right:14px}.fc-bottom{bottom:26px;left:14px}
+  .floating-card{padding:10px 12px}
+  .detail-image{height:clamp(200px,52vw,270px);border-radius:18px}
+  .detail-copy{padding-top:18px}
+  .course-detail{gap:24px}
+  .auth-page{padding:28px 14px}
+  .auth-card{padding:24px 18px;border-radius:20px}
+  .contact-form{padding:20px}
+  .checkout-card,.order-summary{padding:20px}
+  .panel,.admin-panel{padding:18px}
+  .dash-stat,.admin-stat{padding:14px;gap:10px}
+  .dash-stat strong,.admin-stat strong{font-size:1.25rem}
+  .progress-course{flex-wrap:wrap}
+  .progress-course .pc-info{flex-basis:100%}
+  .cta-section{padding:44px 0}
+  .cta .btn{width:100%}
+  .footer{padding-top:40px}
+  .footer-grid{gap:24px;padding-bottom:28px}
+  .footer-grid>div:first-child{grid-column:1/-1}
+  .admin-tabs{margin-inline:-14px;padding-inline:14px}
+}
+
+/* ---- small phone ---- */
+@media (max-width:420px){
+  .dashboard-stats,.admin-stats{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .journey-steps{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .btn{padding:0 16px}
+}
+
+/* ---- touch devices: comfortable targets ---- */
+@media (pointer:coarse){
+  .icon-btn,.menu-btn,.row-actions button,.more{min-width:44px;min-height:44px}
+  .category-filter button{padding:11px 14px}
+  .nav-links a,.nav-logout{min-height:44px;display:flex;align-items:center}
+}
+
+/* ---- large screens ---- */
+@media (min-width:1440px){
+  .hero-card{height:500px}
+  .course-thumb{height:230px}
+  .detail-image{height:480px}
+  .course-detail{grid-template-columns:1fr 360px}
+}
+@media (min-width:1920px){
+  .hero-card{height:560px}
+  .learning-layout{grid-template-columns:minmax(0,1fr) 380px}
+  .lesson-content{max-width:1280px}
+}

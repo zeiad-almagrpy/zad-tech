@@ -1,0 +1,33 @@
+/* Type + page-width rules. Loaded after base.css so these win. */
+body{font-size:1rem;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg,video{max-width:100%}
+.container{width:min(var(--container),calc(100% - 2 * var(--gutter)))}
+.app-shell{display:flex;flex-direction:column;min-height:100vh;min-height:100dvh;overflow-x:clip}
+.app-shell>main{flex:1 0 auto}
+.navbar{height:var(--nav-h)}
+
+/* Arabic joins letters: any negative letter-spacing breaks the glyph connections. */
+.hero h1,.section-title h2,.brand-word,.eyebrow,.journey h2,.cta h2{letter-spacing:0}
+
+.hero h1{font-size:var(--fs-display);line-height:1.2}
+.hero p{font-size:clamp(1rem,.95rem + .3vw,1.15rem)}
+.about-hero h1,.contact-intro h1{font-size:var(--fs-display);line-height:1.25}
+.detail-copy h1,.dashboard-head h1,.admin-head h1,.auth-card h1,.not-found h1{font-size:var(--fs-h1);line-height:1.35}
+.section-title h2,.journey h2,.cta h2{font-size:var(--fs-h2);line-height:1.3}
+.checkout-header h1{font-size:var(--fs-h3);line-height:1.5}
+.lead{font-size:clamp(1rem,.95rem + .25vw,1.125rem)}
+.eyebrow{color:var(--teal-ink)}
+.cta-section .eyebrow{color:#53d1c4}
+
+/* Hero: Arabic reads right-to-left, so the copy sits on the right and the visual on the left. */
+.hero-grid{direction:rtl}
+.hero-card{overflow:hidden}
+.section{padding:clamp(48px,7vw,95px) 0}
+.empty-state{padding:clamp(28px,6vw,70px)}
+.empty-state .btn{margin-top:14px}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.buy-card,.order-summary{top:calc(var(--nav-h) + 20px)}
+.auth-page{min-height:calc(100dvh - var(--nav-h))}
+
+/* visible keyboard focus */
+:where(a,button,input,textarea,select,summary):focus-visible{outline:3px solid rgba(31,168,154,.55);outline-offset:2px}

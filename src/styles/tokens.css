@@ -1,0 +1,21 @@
+/* Design tokens — brand colours are unchanged from the original identity. */
+:root{
+  --navy:#1B2A5C;--amber:#F5A623;--teal:#1FA89A;--teal-ink:#117d73;
+  --mist:#F4F6FB;--ink:#0d1221;--muted:#697086;--line:#e3e7f0;--white:#fff;
+  --brand:#1B2A5C;--brand-dark:#1B2A5C;--brand-soft:#eef1fa;
+  --shadow:0 20px 60px rgba(27,42,92,.10);--radius:22px;
+
+  --nav-h:78px;
+  --container:1160px;
+  --gutter:20px;
+
+  /* fluid type scale (rem so it follows the root size below) */
+  --fs-display:clamp(2.35rem,1.55rem + 3.6vw,4.5rem);
+  --fs-h1:clamp(1.85rem,1.4rem + 1.9vw,2.8rem);
+  --fs-h2:clamp(1.55rem,1.2rem + 1.4vw,2.4rem);
+  --fs-h3:clamp(1.1rem,1rem + .4vw,1.3rem);
+}
+html{font-size:100%;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%}
+@media (min-width:1440px){:root{--container:1240px;--gutter:32px}html{font-size:106.25%}}
+@media (min-width:1920px){:root{--container:1400px;--gutter:40px}html{font-size:118.75%}}
+@media (max-width:720px){:root{--nav-h:68px;--gutter:14px}}

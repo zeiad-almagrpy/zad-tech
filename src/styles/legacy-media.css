@@ -1,0 +1,56 @@
+/* Original breakpoints (learning-page rules removed) */
+@media(max-width:950px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-card{max-width:620px;width:100%;margin:auto}
+  .course-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-grid{grid-template-columns:1fr}
+  .dashboard-grid,.admin-panels{grid-template-columns:1fr}
+  .dashboard-stats,.admin-stats{grid-template-columns:repeat(2,1fr)}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .course-detail{grid-template-columns:1fr}
+  .buy-card,.order-summary{position:static}
+  .checkout-grid{grid-template-columns:1fr}
+  .contact-page{grid-template-columns:1fr;gap:35px}
+}
+@media(max-width:720px){
+  .container{width:min(100% - 26px,1160px)}
+  .navbar{height:68px}
+  .nav-links{display:none;position:absolute;top:68px;left:13px;right:13px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:4px}
+  .nav-links.open{display:flex}
+  .nav-links a,.nav-logout{padding:11px}
+  .menu-btn{display:block}
+  .nav-actions .btn{display:none}
+  .hero{padding:55px 0 70px}
+  .hero p{font-size:0.9375rem}
+  .hero-card{height:340px}
+  .hero-symbol{width:130px;height:130px}
+  .big-z{font-size:6.5625rem}
+  .section{padding:65px 0}
+  .section-title{align-items:start;flex-direction:column;gap:12px}
+  .course-grid{grid-template-columns:1fr}
+  .journey{grid-template-columns:1fr;padding:28px}
+  .cta{flex-direction:column;align-items:flex-start}
+  .outcomes,.steps{grid-template-columns:1fr}
+  .detail-image{height:270px}
+  .dashboard-head,.admin-head{align-items:flex-start;flex-direction:column}
+  .dashboard-stats,.admin-stats{grid-template-columns:1fr 1fr}
+  .progress-course{align-items:flex-start}
+  .progress-course img{width:90px;height:65px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .pay-method{flex-wrap:wrap}
+  .pay-method strong{margin-left:0}
+  .table-row{grid-template-columns:55px 1fr 70px 35px}
+  .table-row .status{display:none}
+  .admin-tabs{overflow:auto}
+  .admin-tabs button{white-space:nowrap}
+  .brand-word{font-size:1.5rem}
+}
+@media(max-width:700px){
+  .form-grid{grid-template-columns:1fr}
+  .modal-card{padding:18px;border-radius:18px}
+  .modal-actions{flex-direction:column-reverse}
+  .modal-actions .btn{width:100%}
+  .row-actions{margin-inline-start:0}
+  .admin-head{align-items:flex-start;gap:15px}
+  .admin-head>.btn{white-space:nowrap}
+}

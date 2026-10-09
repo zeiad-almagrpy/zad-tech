@@ -1,0 +1,8 @@
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Mail, LockKeyhole, UserRound } from 'lucide-react';
+import Button from '../components/Button';
+import { AuthShell } from './Login';
+import { supabase } from '../lib/supabase';
+
+export default function Register(){const [name,setName]=React.useState('');const [email,setEmail]=React.useState('');const [password,setPassword]=React.useState('');const [error,setError]=React.useState('');const nav=useNavigate();const submit=async e=>{e.preventDefault();setError('');if(!supabase){setError('لم يتم ربط Supabase.');return}const {data,error}=await supabase.auth.signUp({email,password,options:{data:{full_name:name}}});if(error)setError(error.message);else nav('/dashboard');};return <AuthShell title="ابدأ رحلتك" subtitle="أنشئ حسابك وخلي زاد معاك خطوة بخطوة."><form className="auth-form" onSubmit={submit}><label>الاسم<div className="input-icon"><UserRound/><input required value={name} onChange={e=>setName(e.target.value)} placeholder="اسمك"/></div></label><label>البريد الإلكتروني<div className="input-icon"><Mail/><input required type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="you@example.com"/></div></label><label>كلمة المرور<div className="input-icon"><LockKeyhole/><input required minLength="6" type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="6 أحرف على الأقل"/></div></label>{error&&<div className="form-error">{error}</div>}<Button className="full-btn">إنشاء الحساب</Button><p className="auth-switch">عندك حساب؟ <Link to="/login">سجل الدخول</Link></p></form></AuthShell>}
